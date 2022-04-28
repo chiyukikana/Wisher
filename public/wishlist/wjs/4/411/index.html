@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <script>
+    function maskingKeyboard() {
+      if (event.KeyCode == 8) {
+        event.KeyCode = 0;
+        event.returnValue = false;
+        alert("当前设置不允许使用Backspace键");
+      }
+      if (event.KeyCode == 13) {
+        event.KeyCode = 0;
+        event.returnValue = false;
+        alert("当前设置不允许使用Enter键");
+      }
+      if (event.KeyCode == 116) {
+        event.KeyCode = 0;
+        event.returnValue = false;
+        alert("当前设置不允许使用F5刷新键");
+      }
+      //判断是否为alt+方向键或方向键
+      if ((event.altKey && event.KeyCode == 37) || window.event.KeyCode == 39) {
+        event.returnValue = false;
+      }
+      if (event.shiftKey && (event.KeyCode = 78)) {
+        event.KeyCode = 0;
+        event.returnValue = false;
+        alert("当前设置不允许使用Ctrl+N新建IE窗口");
+      }
+      if (event.shiftKey && (event.KeyCode = 121)) {
+        event.returnValue = false;
+        alert("当前设置不允许使用shift+F10");
+      }
+    }
+  </script>
+  <body onkeydown="maskingKeyboard()"></body>
+</html>

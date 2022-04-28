@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scale"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Consolas", "Arial", "Microsoft YaHei", sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        line-height: 90px;
+        color: #fff;
+        font-size: 50px;
+      }
+
+      /*noinspection CssInvalidPropertyValue*/
+      p {
+        line-break: 80px;
+        font-size: 22px;
+        color: #fff;
+      }
+
+      body {
+        background: red url("./img/index.jpg") center center;
+        background-size: cover;
+        position: relative;
+      }
+
+      .container {
+        width: calc(100% - 40px);
+        border-top: 1px solid transparent;
+        text-align: center;
+        padding: 0 20px;
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+      }
+
+      .btn {
+        width: 200px;
+        height: 60px;
+        background-color: #7cacae;
+        color: #fff;
+        font-size: 24px;
+        line-height: 60px;
+        margin: 30px auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .btn:hover {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Let's start our first page!</h1>
+      <p>
+        让欢迎大家来到HTML乐园，通过本书学习，你将获得独立完成静态页面的技能，一起来开启你的第一个页面吧！
+      </p>
+      <div class="btn" id="start">Start</div>
+    </div>
+  </body>
+</html>

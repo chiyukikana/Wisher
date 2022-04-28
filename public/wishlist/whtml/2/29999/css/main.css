@@ -1,0 +1,97 @@
+* {
+  font-family: "Consolas", "Arial", "Microsoft YaHei UI", sans-serif;
+}
+
+select,
+input,
+button {
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 500px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+body > header > a {
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+body > header > div {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+body > header > div > img {
+  width: 32%;
+  margin: 0 6px 6px 0;
+}
+
+body > header > article {
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+body > section {
+  position: relative;
+}
+
+body > section > h1 {
+  height: 32px;
+  line-height: 32px;
+  padding-top: 20px;
+}
+
+#sel {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  font-size: 0;
+}
+
+#selected {
+  width: 120px;
+  height: 24px;
+  border-radius: 0;
+  padding-left: 6px;
+}
+
+#sel > label {
+  width: 60px;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 22px;
+}
+
+#sel > input {
+  width: 100%;
+  height: 32px;
+  line-height: 30px;
+  display: block;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: 12px;
+  letter-spacing: 2px;
+  border: 1px solid #808080;
+}

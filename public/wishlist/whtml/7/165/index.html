@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Table</title>
+    <style>
+      body {
+        background-color: #efedec;
+      }
+
+      table {
+        margin: 100px auto;
+        border-collapse: collapse;
+      }
+
+      table > caption > h1 {
+        font: bold 40px/50px "Microsoft YaHei";
+      }
+
+      table > caption > p {
+        font: normal 18px/20px Consolas;
+        margin-top: -10px;
+        margin-bottom: 60px;
+      }
+
+      table th,
+      table td {
+        width: 150px;
+        height: 60px;
+        text-align: center;
+      }
+
+      table tr {
+        border-bottom: 1px solid #000;
+      }
+
+      table > tbody > tr:last-child {
+        border-bottom: none;
+      }
+
+      table > tbody > tr:first-child > th {
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+      }
+
+      table > thead th:nth-of-type(2n),
+      table > tbody td:nth-of-type(2n + 1) {
+        background-color: #e2ddda;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        <h1>计算机专业课程表</h1>
+        <p>Course Schedule for Computer Major</p>
+      </caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th>星期一</th>
+          <th>星期二</th>
+          <th>星期三</th>
+          <th>星期四</th>
+          <th>星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2">上午</th>
+          <td>离散数学</td>
+          <td>大学物理</td>
+          <td>高数</td>
+          <td>大学英语</td>
+          <td>WEB编程技术</td>
+        </tr>
+        <tr>
+          <td>马克思主义哲学</td>
+          <td>高数</td>
+          <td>计算机基础</td>
+          <td>高数</td>
+          <td>物理实验</td>
+        </tr>
+        <tr>
+          <th>下午</th>
+          <td>线性代数</td>
+          <td>大学物理</td>
+          <td>电子电路</td>
+          <td>马克思主义哲学</td>
+          <td>心理学</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

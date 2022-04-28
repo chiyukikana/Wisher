@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      var outter = 10;
+      function add(number1, number2) {
+        function innerAdd() {
+          alert("参数的和为:" + (number1 + number2 + outter));
+        }
+        return innerAdd();
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      add(10, 10);
+    </script>
+  </body>
+</html>

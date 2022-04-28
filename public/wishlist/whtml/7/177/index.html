@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form
+      target="_blank"
+      action="http://localhost:5000/admin/register"
+      method="get"
+    >
+      <p>
+        <label for="username"
+          >用户名：
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Please input the username."
+          />
+        </label>
+      </p>
+      <p>
+        <label for="password"
+          >密码：
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Please input the password."
+          />
+        </label>
+      </p>
+      <p>
+        性别：
+        <label for="gender_male">
+          <input id="gender_male" name="gender" type="radio" value="男" />男
+        </label>
+        <label for="gender_female">
+          <input id="gender_female" name="gender" type="radio" value="女" />女
+        </label>
+      </p>
+      <p>
+        兴趣爱好：
+        <label for="interest_game">
+          <input
+            id="interest_game"
+            type="checkbox"
+            name="interest"
+            value="game"
+          />游戏
+        </label>
+        <label for="interest_run">
+          <input
+            id="interest_run"
+            type="checkbox"
+            name="interest"
+            value="run"
+          />跑步
+        </label>
+        <label for="interest_read">
+          <input
+            id="interest_read"
+            type="checkbox"
+            name="interest"
+            value="read"
+          />阅读
+        </label>
+      </p>
+      <p>
+        <input type="submit" value="注册" />
+      </p>
+    </form>
+  </body>
+</html>

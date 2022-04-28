@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      function setValue(num1, num2, num3) {
+        var avg = (num1 + num2 + num3) / 3;
+        return avg;
+      }
+      function getValue(num1, num2, num3) {
+        document.writeln(
+          "参数分别为:" + num1 + "、" + num2 + "、" + num3 + "。"
+        );
+        var value = setValue(num1, num2, num3);
+        document.write("取参数平均值，运行结果为:" + value);
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      getValue(60, 59, 60);
+    </script>
+  </body>
+</html>

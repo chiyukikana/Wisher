@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      function array_max() {
+        var i,
+          max = this[0];
+        for (i = 1; i < this.length; i++) {
+          if (max < this[i]) {
+            max = this[i];
+          }
+        }
+        return max;
+      }
+      Array.prototype.max = array_max;
+      var x = new Array(1, 2, 3, 28, 4, 99, 5, 6);
+      document.write("刚才创建了一个数组对象的实例：" + x.toLocaleString());
+      document.write("<br>");
+
+      var y = x.max();
+      document.write("<br>");
+      document.write(y);
+      document.write("<br>");
+      document.write("y的类型是：" + typeof y);
+      document.write("<br>");
+      document.write("将y转换成字符串为：" + (y.toString() + 100));
+
+      document.write("<br>");
+      document.write("实例x是由哪个构造函数创建的？应该是：" + x.constructor);
+
+      var date1 = new Date();
+      document.write("<br>");
+      document.write("<br>");
+      document.write(date1.valueOf());
+    </script>
+  </body>
+</html>

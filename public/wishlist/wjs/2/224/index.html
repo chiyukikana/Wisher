@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      var userName = "mr";
+      document.write(userName + "<br>");
+      var a = 10,
+        b = 3;
+      document.write("a的值是" + a + ",b的值" + b + "<br>");
+      a += b;
+      document.write("执行a+=b后a的结果是" + a + "<br>");
+      a -= b;
+      document.write("执行a-=b后a的结果是" + a + "<br>");
+      a *= b;
+      document.write("执行a*=b后a的结果是" + a + "<br>");
+      a /= b;
+      document.write("执行a/=b后a的结果是" + a + "<br>");
+      a %= b;
+      document.write("执行a%=b后a的结果是" + a + "<br>" + "<br>");
+
+      var t = true;
+      f = false;
+      document.write("t的值是" + t + ",f的值是" + f + "<br>");
+      t &= t;
+      document.write("执行t&=t后t的结果是" + t + "<br>");
+      t &= f;
+      document.write("执行t&=f后t的结果是" + t + "<br>");
+      f &= f;
+      document.write("执行f&=f后f的结果是" + f + "<br>" + "<br>");
+
+      t = true;
+      f = false;
+      document.write("t的值是" + t + ",f的值是" + f + "<br>");
+      t |= t;
+      document.write("执行t|=t后t的结果是" + t + "<br>");
+      t |= f;
+      document.write("执行t|=f后t的结果是" + t + "<br>");
+      f |= f;
+      document.write("执行f|=f后f的结果是" + f + "<br>" + "<br>");
+    </script>
+  </body>
+</html>

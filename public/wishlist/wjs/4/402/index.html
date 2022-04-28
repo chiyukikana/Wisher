@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <h3>0402-p56【例4.5】内置函数的应用</h3>
+    <script>
+      parseInt();
+      var num1 = "123abc";
+      var num2 = "abc123";
+      document.write("(1)使用parseInt()函数<br>");
+      document.write("123abc转化结果为:" + parseInt(num1) + "<br>");
+      document.write("abc123转化结果为:" + parseInt(num2) + "<br><br>");
+      parseFloat();
+      var num3 = "123.456789abc";
+      document.write("(2)使用parseFloat()函数<br>");
+      document.write("123.456789abc转化结果为:" + parseInt(num3) + "<br><br>");
+      isNaN();
+      document.write("(3)使用isNaN()函数<br>");
+      document.write(
+        "123.456789abc转化是否为NaN:" + isNaN(parseFloat(num3)) + "<br>"
+      );
+      document.write(
+        "abc123转化是否为NaN:" + isNaN(parseFloat(num2)) + "<br><br>"
+      );
+      isFinite();
+      document.write("(4)使用isFinite()函数<br>");
+      document.write(
+        "1除以0的结果是否为无穷大:" + isFinite(1 / 0) + "<br><br>"
+      );
+      encodeURI();
+      document.write("(5)使用encodeURI()函数<br>");
+      document.write(
+        "转化为网络资源地址为:" +
+          encodeURI("http://127.0.0.1/save.html?name=测试") +
+          "<br><br>"
+      );
+      decodeURI();
+      document.write("(6)使用decodeURI()函数<br>");
+      document.write(
+        "转化为网络资源地址的字符串为:" +
+          decodeURI(encodeURI("http://127.0.0.1/save.html?name=测试")) +
+          "<br><br>"
+      );
+    </script>
+  </body>
+</html>

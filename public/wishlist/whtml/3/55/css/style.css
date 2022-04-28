@@ -1,0 +1,14 @@
+body {
+  font-family: "Consolas", "Arial", "Microsoft YaHei", sans-serif;
+  text-align: center;
+}
+h1 {
+  color: grey;
+}
+img {
+  width: 300px;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+}

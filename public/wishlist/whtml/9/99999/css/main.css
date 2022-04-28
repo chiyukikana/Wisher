@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Consolas", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+body {
+  min-width: 1400px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+body > header {
+  height: 640px;
+  padding-top: 40px;
+  background: url("../img/ind_1.jpg") center;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#logo_nav {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 80px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+#logo_nav > img {
+  margin-top: -10px;
+  float: left;
+}
+
+#logo_nav > nav {
+  float: right;
+}
+
+#logo_nav > nav li {
+  margin-left: 40px;
+  float: left;
+}
+
+body > header > img {
+  margin-top: calc(640px / 2 - 65px / 2 - 90px);
+  margin-left: calc(50% - 570px / 2);
+  display: block;
+}
+
+main {
+  padding: 45px 0;
+  margin-left: calc(50% - 270px * 3 / 2);
+}
+
+main > div {
+  width: 270px;
+  float: left;
+}
+
+main > div > img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+main > div > h6 {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 8px 0;
+}
+
+main > div > p {
+  font-size: 12px;
+  text-align: center;
+  color: #505050;
+}
+
+footer {
+  background: #333333;
+  padding: 25px 80px 25px 120px;
+}
+
+footer > div {
+  width: 50%;
+  float: left;
+}
+
+footer > div > ul {
+  margin-bottom: 10px;
+}
+
+footer li {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 24px;
+  float: left;
+}
+
+footer p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #aaa;
+}
+
+.addr {
+  border-top: 1px dotted #fff;
+  padding-top: 10px;
+}
+
+.supports {
+  float: left;
+  margin-left: 140px;
+}
+
+.supports > i {
+  width: 40px;
+  height: 40px;
+  background: url("../img/iconlist.png") 0 -140px;
+  float: left;
+  margin-top: calc(52px / 2 - 40px / 2);
+}
+
+.supports > div {
+  color: #aaa;
+  float: left;
+  margin-left: 10px;
+}
+
+.supports h5 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.supports p {
+  font-size: 16px;
+  margin-top: 10px;
+}

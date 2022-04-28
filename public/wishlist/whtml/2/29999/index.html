@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>咖啡馆介绍</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>咖啡馆介绍</h1>
+      <a href="#CoffeeMenu">查看菜单</a>
+      <div>
+        <img src="./img/coffee1.png" alt="" />
+        <img src="./img/coffee2.png" alt="" />
+      </div>
+      <article>
+        <p>
+          咖啡馆文化是西方的人文传统历史文化之一，咖啡馆是一个国家或一座城市的一个文化传承载体，一个不可或缺的细胞、咖啡馆文化中最核心的功能就是社会经济润滑剂，它无形中拉近了不同阶层的距离。各国不同的风情与文化，造就了不同的咖啡馆文化。
+        </p>
+        <p>
+          咖啡的故乡在非洲埃塞俄比高原的南部，约在公元6世纪左右被人发现，因其具有神清脑的作用，当地人开始咀嚼咖啡豆，用水煮咖啡喝。由于其神奇的提神作用，咖啡得到了广泛传播。在非洲部落里，甚至有些作为勇士们战前饮用的“圣品”，充满了浓厚的宗教色彩。一个英国商人从土耳其帝国首次养成了饮用咖啡的习惯，在他回到伦敦后，也把这个习惯逮到了英国。
+        </p>
+      </article>
+    </header>
+    <section>
+      <h1 id="CoffeeMenu">咖啡馆菜单</h1>
+      <ul>
+        <li>
+          咖啡
+          <ol>
+            意式浓缩
+          </ol>
+          <ol>
+            美式咖啡
+          </ol>
+          <ol>
+            焦糖玛奇朵
+          </ol>
+          <ol>
+            拿铁
+            <ul>
+              <li>冰</li>
+              <li>热</li>
+            </ul>
+          </ol>
+          <ol>
+            摩卡
+            <ul>
+              <li>冰</li>
+              <li>热</li>
+            </ul>
+          </ol>
+          <ol>
+            爱尔兰咖啡
+          </ol>
+          <ol>
+            维也纳咖啡
+          </ol>
+        </li>
+        <li>
+          果汁
+          <ol>
+            鲜榨芒果汁
+          </ol>
+          <ol>
+            鲜榨橙汁
+          </ol>
+          <ol>
+            鲜榨西瓜汁
+          </ol>
+          <ol>
+            鲜榨青瓜汁
+          </ol>
+        </li>
+        <li>
+          奶茶
+          <ol>
+            鸳鸯奶茶
+          </ol>
+          <ol>
+            珍珠奶茶
+          </ol>
+          <ol>
+            原味奶茶
+          </ol>
+          <ol>
+            布丁奶茶
+          </ol>
+        </li>
+        <li>
+          甜点
+          <ol>
+            黑森林
+          </ol>
+          <ol>
+            芒果慕斯
+          </ol>
+          <ol>
+            草莓慕斯
+          </ol>
+          <ol>
+            焦糖布丁
+          </ol>
+        </li>
+      </ul>
+      <div id="sel">
+        <label for="selected">已选择</label>
+        <select name="selected" id="selected">
+          <optgroup label="咖啡">
+            <option value="意式浓缩">意式浓缩</option>
+            <option value="美式咖啡">美式咖啡</option>
+            <option value="焦糖玛奇朵">焦糖玛奇朵</option>
+            <option value="拿铁冰">拿铁 (冰)</option>
+            <option value="拿铁热">拿铁 (热)</option>
+          </optgroup>
+          <optgroup label="果汁">
+            <option value="鲜榨芒果汁">鲜榨芒果汁</option>
+            <option value="鲜榨橙汁">鲜榨橙汁</option>
+            <option value="鲜榨西瓜汁">鲜榨西瓜汁</option>
+            <option value="鲜榨青瓜汁">鲜榨青瓜汁</option>
+          </optgroup>
+          <optgroup label="奶茶">
+            <option value="鸳鸯奶茶">鸳鸯奶茶</option>
+            <option value="珍珠奶茶">珍珠奶茶</option>
+            <option value="原味奶茶">原味奶茶</option>
+            <option value="布丁奶茶">布丁奶茶</option>
+          </optgroup>
+          <optgroup label="甜点">
+            <option value="黑森林">黑森林</option>
+            <option value="芒果慕斯">芒果慕斯</option>
+            <option value="草莓慕斯">草莓慕斯</option>
+            <option value="焦糖布丁">焦糖布丁</option>
+          </optgroup>
+        </select>
+        <input type="submit" form="selected" value="确认选择" />
+      </div>
+    </section>
+  </body>
+</html>

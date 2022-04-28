@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Consolas", "Microsoft YaHei", sans-serif;
+  position: relative;
+}
+
+body {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  font-style: normal;
+}
+
+body > header {
+  height: 450px;
+  background: url("../img/mountains-3.jpg") center -45px no-repeat;
+  background-size: cover;
+}
+
+.menu {
+  margin: 0 30px;
+  padding: 22px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body > header > h1 {
+  color: #fff;
+  font-size: 34px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 140px;
+}
+
+body > header .menu a {
+  vertical-align: middle;
+}
+
+body > section {
+  padding: 0 50px;
+}
+
+body > section > aside {
+  margin: 80px 0 18px;
+  text-align: center;
+}
+
+body > section > aside > a {
+  color: #505050;
+  font-size: 14px;
+  border: 1px solid #9d9d9d;
+  padding: 4px;
+}
+
+body > section .box div {
+  width: 33%;
+  float: left;
+  margin: 0 0.5% 0.5% 0;
+  height: 240px;
+}
+
+body > section .box div img {
+  width: 100%;
+  height: 100%;
+}
+
+body > section .box div:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+body > section .box div .mask {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 240px;
+  text-align: center;
+  background-color: rgba(37, 222, 160, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0;
+}
+
+body > section .box div .mask span {
+  width: 90%;
+  height: 90%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: calc(10% / 2);
+  top: calc(10% / 2);
+  z-index: -1;
+}
+
+body > section .box div .mask img {
+  width: initial;
+  height: initial;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+body > section .box div .mask:hover {
+  opacity: 1;
+}
+
+body > footer {
+  color: #919191;
+  background-color: #000;
+  text-align: center;
+}
+
+body > footer .links {
+  padding-top: 40px;
+}
+
+body > footer .links a {
+  margin: 0 10px;
+}
+
+body > footer > address {
+  font-size: 14px;
+  font-style: normal;
+  padding-top: 20px;
+}
+
+.more {
+  padding: 20px 0 30px;
+  font-size: 14px;
+}

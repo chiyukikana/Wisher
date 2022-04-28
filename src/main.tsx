@@ -1,0 +1,20 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
+import App from "./pages/App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector("#root")
+);
+
+console.log(
+  "%c\n\u2588\u2588\u2588\u2557   \u2588\u2588\u2588\u2557 \u2588\u2588\u2557   \u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2557\n\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2554\u2550\u255d\n\u2588\u2588\u2554\u2588\u2588\u2588\u2588\u2554\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2551\n\u2588\u2588\u2551\u255a\u2588\u2588\u2554\u255d\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2551\n\u2588\u2588\u2551 \u255a\u2550\u255d \u2588\u2588\u2551 \u255a\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d \u2588\u2588\u2588\u2588\u2588\u2588\u2557\n\u255a\u2550\u255d     \u255a\u2550\u255d  \u255a\u2550\u2550\u2550\u2550\u2550\u255d  \u255a\u2550\u2550\u2550\u2550\u2550\u255d\n",
+  "font-family:monospace;color:#1976d2;font-size:12px;"
+);

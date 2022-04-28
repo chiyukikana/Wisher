@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("../img/background-img.png") no-repeat fixed center;
+  background-size: cover;
+
+  /*background-image: url("../img/background-img.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
+  /*background-position: center;*/
+}
+
+body > article > h1 {
+  font-family: "Microsoft YaHei UI-Bold", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  line-height: 100px;
+  color: #fff;
+}
+
+body > article > p {
+  font-family: "Microsoft YaHei UI", sans-serif;
+  font-size: 20px;
+  line-height: 2;
+  text-indent: 2em;
+  color: #fff;
+}
+
+.advanced {
+  background-color: #ff0000;
+}

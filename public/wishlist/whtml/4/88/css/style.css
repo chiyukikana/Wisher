@@ -1,0 +1,17 @@
+div {
+  margin-bottom: 32px;
+}
+
+div:nth-of-type(1) {
+  width: 200px;
+  height: 200px;
+  background: #ff9900;
+  border-radius: 20px;
+}
+
+div:nth-of-type(2) {
+  width: 80px;
+  height: 80px;
+  background: #f1938a;
+  border-radius: 50%;
+}

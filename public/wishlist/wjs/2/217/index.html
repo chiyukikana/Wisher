@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      var a; //该变量在函数外声明，作用于整个代码脚本
+      function send() {
+        a = "JavaScript";
+        var b = "语言基础"; //该变量在函数内声明，只作用于该函数体
+        alert(a + b);
+      }
+
+      send();
+      document.write(a);
+      document.write(b);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form name="form1" method="post" action="abc.php">
+      <table
+        width="270"
+        border="1"
+        cellspacing="0"
+        cellpadding="0"
+        bordercolor="#FFFFFF"
+        bordercolordark="#CCCCCC"
+        bordercolorlight="#FFFFFF"
+      >
+        <tr>
+          <td height="30" colspan="2" bgcolor="#eeeeee">·用户登录</td>
+        </tr>
+        <tr>
+          <td width="100" height="30">用户名:</td>
+          <td><input name="user" type="text" id="user" /></td>
+        </tr>
+        <tr>
+          <td height="30">密　码:</td>
+          <td><input name="pwd" type="password" id="pwd" /></td>
+        </tr>
+        <tr>
+          <td height="30" colspan="2" align="center">
+            <input
+              name="Button"
+              type="button"
+              class="btn_grey"
+              value="登录"
+              onclick="check()"
+            />
+            &nbsp;
+            <input
+              name="login_reset"
+              type="reset"
+              class="btn_grey"
+              value="重置"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function check() {
+        var name = form1.user.value;
+        var pwd = form1.pwd.value;
+        if (name == "" || name == null) {
+          alert("请输入用户名!");
+          form1.user.focus();
+          return;
+        } else if (pwd == "" || (pwd = null)) {
+          alert("请输入密码!");
+          form1.pwd.focus();
+          return;
+        } else {
+          form1.submit();
+        }
+      }
+    </script>
+  </body>
+</html>
