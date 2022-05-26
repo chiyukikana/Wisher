@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>自定义右键菜单</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      #menu {
+        width: 152px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid darkgray;
+        font-size: 0.85rem;
+        box-sizing: border-box;
+        display: none;
+        background: whitesmoke;
+      }
+
+      #menu ul:first-of-type {
+        border-bottom: 1px solid darkgray;
+      }
+
+      #menu li {
+        padding: 0.25rem 0 0.25rem 1rem;
+      }
+
+      #menu li:hover {
+        background: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const menuElem = document.createElement("div");
+      const options = [
+        [
+          {
+            label: "弹出对话框",
+            action() {
+              alert("对话框");
+            },
+          },
+          {
+            label: "在新窗口打开百度",
+            action() {
+              window.open("https://baidu.com", "_blank");
+            },
+          },
+        ],
+        [
+          {
+            label: "关闭此页面",
+            action() {
+              window.close();
+            },
+          },
+        ],
+      ];
+
+      menuElem.id = "menu";
+      // Disable default event.
+      window.oncontextmenu = () => false;
+      // Loop options.
+      options.forEach((opt) => {
+        const chunk = document.createElement("ul");
+
+        // Loop children items.
+        opt.forEach(({ label, action }) => {
+          const item = document.createElement("li");
+          const aElem = document.createElement("a");
+
+          aElem.href = "javascript:";
+          aElem.innerText = label;
+          aElem.addEventListener("click", () => {
+            action();
+            menuElem.style.display = "none";
+          });
+          item.appendChild(aElem);
+          chunk.appendChild(item);
+        });
+
+        menuElem.appendChild(chunk);
+      });
+      document.addEventListener("mousedown", (ev) => {
+        menuElem.style.display = "block";
+
+        // Mouse left click.
+        if (ev.button === 0 && ev.target === document.documentElement) {
+          menuElem.style.display = "none";
+        }
+        // Mouse right click.
+        if (ev.button === 2) {
+          if (
+            ev.clientX + menuElem.clientWidth >=
+            document.documentElement.clientWidth
+          ) {
+            menuElem.style.left = `${ev.clientX - menuElem.clientWidth}px`;
+          } else {
+            menuElem.style.left = `${ev.clientX}px`;
+          }
+
+          if (
+            ev.clientY + menuElem.clientHeight >=
+            document.documentElement.clientHeight
+          ) {
+            menuElem.style.top = `${ev.clientY - menuElem.clientHeight}px`;
+          } else {
+            menuElem.style.top = `${ev.clientY}px`;
+          }
+        }
+      });
+      document.body.appendChild(menuElem);
+    </script>
+  </body>
+</html>

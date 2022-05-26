@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网页中的窗口</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        user-select: none;
+      }
+      #custom_window {
+        width: 500px;
+        position: fixed;
+        border: 1px solid lightgray;
+        box-sizing: border-box;
+        left: 100px;
+        top: 100px;
+      }
+      #custom_window > h1 {
+        font-size: 1.25rem;
+        border-bottom: 1px solid lightgray;
+        padding-left: 0.5rem;
+        cursor: move;
+      }
+      #custom_window > div {
+        padding: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="custom_window">
+      <h1>窗口标题</h1>
+      <div>
+        <p>
+          1234567890-1234567890-1234567890-1234567890-1234567890-1234567890-1234567890-1234567890
+        </p>
+        <p>
+          abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef
+        </p>
+        <p>
+          abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef
+        </p>
+        <p>
+          abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef
+        </p>
+        <p>
+          abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef-abcdef
+        </p>
+      </div>
+    </div>
+    <script>
+      let dx, dy;
+      const rootElem = document.querySelector("#custom_window");
+      const dragElem = document.querySelector("#custom_window > h1");
+      const mousedownHandler = (ev) => {
+        dx = ev.clientX - rootElem.offsetLeft;
+        dy = ev.clientY - rootElem.offsetTop;
+
+        if (ev.target === dragElem) {
+          document.addEventListener("mousemove", mousemoveHandler);
+        }
+      };
+      const mouseupHandler = () => {
+        document.removeEventListener("mousemove", mousemoveHandler);
+      };
+      const mousemoveHandler = (ev) => {
+        const docWidth = document.documentElement.clientWidth;
+        const docHeight = document.documentElement.clientHeight;
+
+        rootElem.style.left = `${ev.clientX - dx}px`;
+        rootElem.style.top = `${ev.clientY - dy}px`;
+
+        // 边缘自动贴合
+        if (rootElem.offsetLeft <= 10) {
+          rootElem.style.left = 0;
+        }
+        if (rootElem.offsetTop <= 10) {
+          rootElem.style.top = 0;
+        }
+        if (rootElem.offsetLeft + rootElem.clientWidth >= docWidth - 10) {
+          rootElem.style.left = `${docWidth - rootElem.clientWidth}px`;
+        }
+        if (rootElem.offsetTop + rootElem.clientHeight >= docHeight - 10) {
+          rootElem.style.top = `${docHeight - rootElem.clientHeight}px`;
+        }
+
+        // 禁止超出屏幕之外
+        if (rootElem.offsetLeft < 0) {
+          rootElem.style.left = 0;
+        }
+        if (rootElem.offsetTop < 0) {
+          rootElem.style.top = 0;
+        }
+        if (rootElem.offsetLeft + rootElem.clientWidth >= docWidth) {
+          rootElem.style.left = `${docWidth - rootElem.clientWidth}px`;
+        }
+        if (rootElem.offsetTop + rootElem.clientHeight >= docHeight) {
+          rootElem.style.top = `${docHeight - rootElem.clientHeight}px`;
+        }
+      };
+
+      document.addEventListener("mousedown", mousedownHandler);
+      document.addEventListener("mouseup", mouseupHandler);
+    </script>
+  </body>
+</html>
