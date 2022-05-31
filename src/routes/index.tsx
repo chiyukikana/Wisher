@@ -2,6 +2,7 @@ import React, { FC, Suspense } from "react";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Loading from "../components/Loading";
 import wishlist from "../../public/wishlist.json";
+import Projects from "../components/Projects";
 
 const Home = React.lazy(() => import("../pages/Home"));
 const Wishlist = React.lazy(() => import("../components/Wishlist"));
@@ -15,6 +16,7 @@ const RouteController: FC = () => {
           <Route path="/" element={<Home />}>
             <Route path="h5" element={<Wishlist list={html5} />} />
             <Route path="js" element={<Wishlist list={js} />} />
+            <Route path="github-projects" element={<Projects />} />
             <Route path="*" element={<Navigate to="/h5" replace />} />
           </Route>
         </Routes>
