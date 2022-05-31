@@ -15,16 +15,24 @@
       #custom_window {
         width: 500px;
         position: fixed;
-        border: 1px solid lightgray;
+        border: 1px solid #000;
         box-sizing: border-box;
         left: 100px;
         top: 100px;
       }
       #custom_window > h1 {
         font-size: 1.25rem;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid #000;
         padding-left: 0.5rem;
         cursor: move;
+      }
+      #custom_window > i {
+        line-height: 29px;
+        font-style: normal;
+        position: absolute;
+        right: 0.25rem;
+        top: 0;
+        cursor: pointer;
       }
       #custom_window > div {
         padding: 0.25rem;
@@ -34,6 +42,7 @@
   <body>
     <div id="custom_window">
       <h1>窗口标题</h1>
+      <i>关闭</i>
       <div>
         <p>
           1234567890-1234567890-1234567890-1234567890-1234567890-1234567890-1234567890-1234567890
@@ -53,14 +62,17 @@
       </div>
     </div>
     <script>
+      // 获取元素与鼠标按下时位置的距离差值
       let dx, dy;
       const rootElem = document.querySelector("#custom_window");
       const dragElem = document.querySelector("#custom_window > h1");
+      const closeElem = document.querySelector("#custom_window > i");
+      // 鼠标按下的位置如果是标题栏，则允许进行移动。
       const mousedownHandler = (ev) => {
-        dx = ev.clientX - rootElem.offsetLeft;
-        dy = ev.clientY - rootElem.offsetTop;
-
         if (ev.target === dragElem) {
+          dx = ev.clientX - rootElem.offsetLeft;
+          dy = ev.clientY - rootElem.offsetTop;
+
           document.addEventListener("mousemove", mousemoveHandler);
         }
       };
@@ -105,6 +117,9 @@
 
       document.addEventListener("mousedown", mousedownHandler);
       document.addEventListener("mouseup", mouseupHandler);
+      closeElem.addEventListener("click", () => {
+        rootElem.style.display = "none";
+      });
     </script>
   </body>
 </html>
